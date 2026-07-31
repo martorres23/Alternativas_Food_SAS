@@ -16,7 +16,7 @@ const navLinks = [
 const WHATSAPP_URL =
   "https://wa.me/573151063714?text=" +
   encodeURIComponent(
-    "Hola. Estoy interesado en conocer más sobre fruver, abarrotes y refrigerios institucionales de Alternativas Food SAS."
+    "Hola. Estoy interesado en conocer más sobre fruver, proteínas, abarrotes y refrigerios institucionales de Alternativas Food SAS."
   );
 
 export default function Navbar() {

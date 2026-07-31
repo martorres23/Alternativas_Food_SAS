@@ -20,14 +20,16 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Alternativas Food SAS | Fruver, Abarrotes y Refrigerios Institucionales",
-  description: "Distribuidor de fruver, abarrotes y refrigerios institucionales con los más altos estándares de inocuidad y logística nacional.",
+  title: "Alternativas Food SAS | Fruver, Proteínas, Abarrotes y Refrigerios",
+  description: "Distribuidor de fruver, proteínas, abarrotes y refrigerios institucionales con los más altos estándares de inocuidad y logística nacional.",
   keywords: [
     "Fruver",
+    "Proteínas",
     "Abarrotes",
     "Refrigerios institucionales",
     "Distribución de alimentos",
     "Frutas y verduras Colombia",
+    "Carnes y pollo Colombia",
     "Logística de alimentos Colombia",
     "Alternativas Food SAS",
     "Suministro de alimentos restaurantes",
@@ -38,8 +40,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_CO",
     url: "https://www.alternativasfood.com.co",
-    title: "Alternativas Food SAS | Fruver, Abarrotes y Refrigerios",
-    description: "Distribución de fruver, abarrotes y refrigerios institucionales de alta calidad.",
+    title: "Alternativas Food SAS | Fruver, Proteínas, Abarrotes y Refrigerios",
+    description: "Distribución de fruver, proteínas, abarrotes y refrigerios institucionales de alta calidad.",
     siteName: "Alternativas Food SAS",
   },
   icons: {

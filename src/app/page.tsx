@@ -12,6 +12,7 @@ import {
   Coffee,
   ChefHat,
   Apple,
+  Beef,
   Package,
   ShieldCheck,
   ArrowUpRight,
@@ -38,6 +39,13 @@ const servicesList: ServiceDetail[] = [
     longDesc: "Abastecemos a hoteles, restaurantes e instituciones con productos hortofrutícolas de la mejor calidad, comprados directamente a productores locales para asegurar frescura diaria, eliminando intermediarios y ofreciendo precios competitivos en frutas y verduras de temporada.",
     icon: <Apple className="h-7 w-7 text-primary" />,
     image: "/images/fruver.png",
+  },
+  {
+    title: "Proteínas",
+    shortDesc: "Suministro mayorista de carnes rojas, pollo, pescado y embutidos con trazabilidad garantizada.",
+    longDesc: "Proveemos proteínas animales frescas, porcionadas e higienizadas a restaurantes, hoteles y comercios. Garantizamos cortes homogéneos y una cadena de frío estricta que preserva la calidad y frescura de cada producto.",
+    icon: <Beef className="h-7 w-7 text-primary" />,
+    image: "/images/proteinas.jpeg",
   },
   {
     title: "Abarrotes",
@@ -134,7 +142,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.25 }}
                 className="mt-6 text-base sm:text-lg text-neutral-text font-sans leading-relaxed max-w-xl"
               >
-                Fruver, abarrotes y refrigerios institucionales. Calidad, frescura y cumplimiento en cada entrega para restaurantes, hoteles, supermercados y empresas.
+                Fruver, proteínas, abarrotes y refrigerios institucionales. Calidad, frescura y cumplimiento en cada entrega para restaurantes, hoteles, supermercados y empresas.
               </motion.p>
 
               <motion.div
@@ -260,11 +268,11 @@ export default function Home() {
               Portafolio Integral de Distribución de Alimentos
             </h2>
             <p className="font-sans text-neutral-text mt-4">
-              Ofrecemos fruver, abarrotes y refrigerios institucionales, cuidadosamente seleccionados para cumplir con altos estándares de calidad. Eficiencia en la entrega, disponibilidad constante y atención personalizada.
+              Ofrecemos fruver, proteínas, abarrotes y refrigerios institucionales, cuidadosamente seleccionados para cumplir con altos estándares de calidad. Eficiencia en la entrega, disponibilidad constante y atención personalizada.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {servicesList.map((service, index) => (
               <motion.article
                 key={index}
@@ -476,7 +484,7 @@ export default function Home() {
                 />
               </div>
               <p className="font-sans text-xs text-white/70 leading-relaxed max-w-sm">
-                Empresa especializada en distribución de alimentos frescos y productos de consumo masivo. Fruver, abarrotes y refrigerios institucionales con calidad garantizada.
+                Empresa especializada en distribución de alimentos frescos y productos de consumo masivo. Fruver, proteínas, abarrotes y refrigerios institucionales con calidad garantizada.
               </p>
               <div className="flex items-center gap-4 text-xs font-bold text-white/55">
                 <span>NIT. 901.321.456-7</span>
@@ -502,6 +510,7 @@ export default function Home() {
               <h4 className="font-display font-bold text-sm tracking-wider uppercase text-primary-light">Nuestros Productos</h4>
               <ul className="space-y-2 text-xs text-white/80">
                 <li><a href="#servicios" className="hover:text-primary-light transition-colors">Fruver</a></li>
+                <li><a href="#servicios" className="hover:text-primary-light transition-colors">Proteínas</a></li>
                 <li><a href="#servicios" className="hover:text-primary-light transition-colors">Abarrotes</a></li>
                 <li><a href="#servicios" className="hover:text-primary-light transition-colors">Refrigerios Institucionales</a></li>
               </ul>

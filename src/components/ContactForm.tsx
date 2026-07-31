@@ -32,6 +32,7 @@ const WHATSAPP_NUMBERS = [
 
 const PRODUCT_LABELS: Record<string, string> = {
   fruver: "Fruver (Frutas y Verduras)",
+  proteinas: "Proteínas (Carnes, Pollo, Pescado)",
   abarrotes: "Abarrotes y Productos de Consumo Masivo",
   refrigerios: "Refrigerios Institucionales",
   portafolio_completo: "Portafolio Completo",
@@ -40,7 +41,7 @@ const PRODUCT_LABELS: Record<string, string> = {
 const waUrl = (number: string, text?: string) =>
   `https://wa.me/${number}?text=${encodeURIComponent(
     text ??
-      "Hola. Estoy interesado en conocer más sobre fruver, abarrotes y refrigerios institucionales de Alternativas Food SAS."
+      "Hola. Estoy interesado en conocer más sobre fruver, proteínas, abarrotes y refrigerios institucionales de Alternativas Food SAS."
   )}`;
 
 function buildRequestMessage(form: FormState) {
@@ -256,6 +257,7 @@ export default function ContactForm() {
             >
               <option value="" disabled>Seleccione un producto...</option>
               <option value="fruver">Fruver (Frutas y Verduras)</option>
+              <option value="proteinas">Proteínas (Carnes, Pollo, Pescado)</option>
               <option value="abarrotes">Abarrotes y Productos de Consumo Masivo</option>
               <option value="refrigerios">Refrigerios Institucionales</option>
               <option value="portafolio_completo">Portafolio Completo</option>
