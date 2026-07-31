@@ -22,15 +22,43 @@ const initialForm: FormState = {
   mensaje: "",
 };
 
+const CONTACT_EMAIL = "alternativasfoods@gmail.com";
+const WHATSAPP_SUBMIT = "573151063714";
+
 const WHATSAPP_NUMBERS = [
   { display: "+57 350 621 9213", wa: "573506219213" },
   { display: "+57 315 106 3714", wa: "573151063714" },
 ];
 
-const waUrl = (number: string) =>
+const PRODUCT_LABELS: Record<string, string> = {
+  fruver: "Fruver (Frutas y Verduras)",
+  abarrotes: "Abarrotes y Productos de Consumo Masivo",
+  refrigerios: "Refrigerios Institucionales",
+  portafolio_completo: "Portafolio Completo",
+};
+
+const waUrl = (number: string, text?: string) =>
   `https://wa.me/${number}?text=${encodeURIComponent(
-    "Hola. Estoy interesado en conocer más sobre fruver, abarrotes y refrigerios institucionales de Alternativas Food SAS."
+    text ??
+      "Hola. Estoy interesado en conocer más sobre fruver, abarrotes y refrigerios institucionales de Alternativas Food SAS."
   )}`;
+
+function buildRequestMessage(form: FormState) {
+  const producto = PRODUCT_LABELS[form.servicio] ?? form.servicio;
+  const lines = [
+    "Solicitud de cotización — Alternativas Food SAS",
+    "",
+    `Nombre: ${form.nombre}`,
+    `Empresa: ${form.empresa || "No indicada"}`,
+    `Correo: ${form.correo}`,
+    `Teléfono: ${form.telefono}`,
+    `Producto de interés: ${producto}`,
+  ];
+  if (form.mensaje.trim()) {
+    lines.push("", "Detalles:", form.mensaje.trim());
+  }
+  return lines.join("\n");
+}
 
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>(initialForm);
@@ -50,12 +78,25 @@ export default function ContactForm() {
     }
 
     setStatus("submitting");
+    setErrorMsg("");
 
-    // Simulate API request
-    setTimeout(() => {
-      setStatus("success");
-      setForm(initialForm);
-    }, 1800);
+    const message = buildRequestMessage(form);
+    const subject = encodeURIComponent(
+      `Cotización B2B — ${form.empresa || form.nombre} — ${PRODUCT_LABELS[form.servicio] ?? form.servicio}`
+    );
+    const body = encodeURIComponent(message);
+
+    window.open(waUrl(WHATSAPP_SUBMIT, message), "_blank", "noopener,noreferrer");
+
+    const mailLink = document.createElement("a");
+    mailLink.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    mailLink.rel = "noopener";
+    document.body.appendChild(mailLink);
+    mailLink.click();
+    mailLink.remove();
+
+    setStatus("success");
+    setForm(initialForm);
   };
 
   return (
@@ -99,10 +140,10 @@ export default function ContactForm() {
                 <div>
                   <h4 className="font-display font-bold text-sm text-neutral-dark">Correo Electrónico</h4>
                   <a
-                    href="mailto:alternativasfoods@gmail.com"
+                    href={`mailto:${CONTACT_EMAIL}`}
                     className="font-sans text-xs text-neutral-text mt-0.5 block hover:text-primary transition-colors"
                   >
-                    alternativasfoods@gmail.com
+                    {CONTACT_EMAIL}
                   </a>
                 </div>
               </div>
@@ -260,8 +301,10 @@ export default function ContactForm() {
               >
                 <CheckCircle2 className="h-5 w-5 text-green-600 shrink-0" />
                 <div>
-                  <p className="font-bold">¡Mensaje Enviado con Éxito!</p>
-                  <p className="text-xs text-green-700 mt-0.5">Nos pondremos en contacto en menos de 24 horas hábiles.</p>
+                  <p className="font-bold">¡Solicitud lista para enviar!</p>
+                  <p className="text-xs text-green-700 mt-0.5">
+                    Se abrió WhatsApp y su correo con los datos del formulario. Envíe el mensaje desde ahí.
+                  </p>
                 </div>
               </motion.div>
             )}
