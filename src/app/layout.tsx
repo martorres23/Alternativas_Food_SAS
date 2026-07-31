@@ -21,7 +21,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Alternativas Food SAS | Fruver, Abarrotes y Refrigerios Institucionales",
-  description: "Distribuidor de fruver, abarrotes y refrigerios institucionales con los más altos estándares de inocuidad y logística regional.",
+  description: "Distribuidor de fruver, abarrotes y refrigerios institucionales con los más altos estándares de inocuidad y logística nacional.",
   keywords: [
     "Fruver",
     "Abarrotes",

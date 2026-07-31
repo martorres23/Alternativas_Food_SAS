@@ -71,7 +71,7 @@ const valueProps = [
   { title: "Personal Certificado", desc: "Todo nuestro personal cuenta con carnet de manipulación y capacitación en inocuidad." },
   { title: "Cumplimiento Sanitario", desc: "Instalaciones certificadas por Secretarías de Salud, INVIMA y en transición HACCP." },
   { title: "Atención Personalizada", desc: "Un asesor de cuenta B2B dedicado responderá sus requerimientos de inmediato." },
-  { title: "Cobertura Logística", desc: "Red regional propia con capacidad de despacho a múltiples municipios." },
+  { title: "Cobertura Logística", desc: "Red propia con capacidad de despacho a nivel nacional." },
   { title: "Calidad Garantizada", desc: "Monitoreo constante mediante auditorías internas de calidad e inocuidad alimentaria." }
 ];
 
@@ -166,7 +166,7 @@ export default function Home() {
                 {[
                   "Calidad Garantizada",
                   "Entregas Oportunas",
-                  "Cobertura Regional",
+                  "Cobertura Nacional",
                   "Atención Personalizada",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2 text-neutral-dark">
@@ -432,10 +432,10 @@ export default function Home() {
               Cobertura y Logística
             </span>
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-neutral-dark">
-              Entregas Oportunas en Nuestra Zona de Operación
+              Entregas Oportunas a Nivel Nacional
             </h2>
             <p className="font-sans text-neutral-text mt-6 text-base sm:text-lg leading-relaxed">
-              Contamos con cobertura en nuestra zona de operación y áreas aledañas, garantizando entregas oportunas mediante rutas programadas y procesos logísticos eficientes. Nuestro compromiso es asegurar que cada producto llegue en óptimas condiciones, conservando su frescura y calidad desde el origen hasta el destino final.
+              Contamos con cobertura nacional, garantizando entregas oportunas mediante rutas programadas y procesos logísticos eficientes. Nuestro compromiso es asegurar que cada producto llegue en óptimas condiciones, conservando su frescura y calidad desde el origen hasta el destino final.
             </p>
           </div>
         </div>
