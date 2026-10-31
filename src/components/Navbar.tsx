@@ -14,7 +14,7 @@ const navLinks = [
 ];
 
 const WHATSAPP_URL =
-  "https://wa.me/573151063714?text=" +
+  "https://wa.me/573204200954?text=" +
   encodeURIComponent(
     "Hola. Estoy interesado en conocer más sobre fruver, proteínas, abarrotes y refrigerios institucionales de Alternativas Food SAS."
   );
@@ -137,7 +137,7 @@ export default function Navbar() {
                   className="inline-flex items-center text-sm font-bold text-primary gap-2"
                 >
                   <Phone className="h-4 w-4" />
-                  <span>+57 315 106 3714</span>
+                  <span>+57 320 420 0954</span>
                 </a>
                 <a
                   href="#contacto"

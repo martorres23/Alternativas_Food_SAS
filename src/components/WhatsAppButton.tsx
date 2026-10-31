@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 export default function WhatsAppButton() {
-  const whatsappNumber = "573151063714";
+  const whatsappNumber = "573204200954";
   const message =
     "Hola. Estoy interesado en conocer más sobre fruver, proteínas, abarrotes y refrigerios institucionales de Alternativas Food SAS.";
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

@@ -23,11 +23,11 @@ const initialForm: FormState = {
 };
 
 const CONTACT_EMAIL = "alternativasfoods@gmail.com";
-const WHATSAPP_SUBMIT = "573151063714";
+const WHATSAPP_SUBMIT = "573204200954";
 
 const WHATSAPP_NUMBERS = [
+  { display: "+57 320 420 0954", wa: "573204200954" },
   { display: "+57 350 621 9213", wa: "573506219213" },
-  { display: "+57 315 106 3714", wa: "573151063714" },
 ];
 
 const PRODUCT_LABELS: Record<string, string> = {
